@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <style>
+        body{
+    text-align:center;
+   background:linear-gradient(to bottom,blue,lightblue,green,lightgreen)
+}img{
+    width:400px;height:400px ;border:blue;
+}
+button{
+    background-color:yellow ;
+}
+h1{
+    color:lightseagreen
+}
+    </style>
+    <body>
+        <h1>
+            Calculator
+        </h1>
+        <hr>
+        <button onclick="calculator()">Click me to type the Question</button>
+        <h3 id="value1"></h3>
+        <h3 id="value2"></h3>
+        <h3 id="operatetor"></h3>
+        <h1><i id="math"></i></h1>
+        <img src="https://www.quirks.com/storage/attachments/62fc4f3b881ef72637797da8/6306bd0495d29c7d1f0665e0/original/Statistical-calculator.png"alt="calculator" />
+        <script>
+            function calculator(){
+let x=prompt("Enter the value of first number");
+let y=prompt("Enter the value of second number");
+let z=prompt("Enter symbol 1=Additon 2=Subtraction 3=Multiplication 4=Division");
+var value1=parseInt(x);
+var value2=parseInt(y);
+let ans;
+let operate;
+if(z==1){
+    ans=value1+value2;
+    operate = "Add"
+}else if(z==2){
+   ans=value1-value2;
+   operate = "Subtract"
+}else if(z==3){
+    ans=value1*value2;
+    operate = "Multiply"
+}else if(z==4){
+    ans=value1/value2;
+    operate = "Divide"
+}else{
+    ans="Not a proper value"
+}
+document.getElementById("value1").innerHTML=`This is value one- ${value1}`
+
+document.getElementById("value2").innerHTML=`This is value two- ${value2}`
+document.getElementById("operatetor").innerHTML=`You choose - ${operate}`
+document.getElementById("math").innerHTML=`This is answer- ${ans}`
+
+
+
+
+}
+        </script>
+    </body>
+</html>
